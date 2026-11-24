@@ -3,8 +3,8 @@ const themeToggle=document.getElementById('themeToggle');
 const themeIcon=document.getElementById('themeIcon');
 const menuToggle=document.getElementById('menuToggle');
 const navLinks=document.getElementById('navLinks');
-function setTheme(theme){root.setAttribute('data-theme',theme);themeIcon.textContent=theme==='dark'?'☀':'☾';try{localStorage.setItem('ppu-theme',theme)}catch(e){}}
-let saved=null;try{saved=localStorage.getItem('ppu-theme')}catch(e){}
+function setTheme(theme){root.setAttribute('data-theme',theme);themeIcon.textContent=theme==='dark'?'☀':'☾';try{localStorage.setItem('ppu-theme-v2',theme)}catch(e){}}
+let saved=null;try{saved=localStorage.getItem('ppu-theme-v2')}catch(e){}
 setTheme(saved||'dark');
 themeToggle.addEventListener('click',()=>setTheme(root.getAttribute('data-theme')==='dark'?'light':'dark'));
 menuToggle.addEventListener('click',()=>{const open=navLinks.classList.toggle('open');menuToggle.setAttribute('aria-expanded',String(open));menuToggle.setAttribute('aria-label',open?'Close navigation':'Open navigation')});

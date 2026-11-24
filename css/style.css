@@ -88,3 +88,16 @@ button.card-link{background:none;border:0;border-bottom:1px solid transparent;pa
 /* v4 fixes */
 [hidden]{display:none!important}
 .card-link,button.card-link{align-self:flex-start;width:auto}
+
+/* v5: readable buttons in light mode */
+html[data-theme=light] .button:not(.ghost),html[data-theme=light] .skip{background:#065f86;color:#fff}
+html[data-theme=light] .button:not(.ghost):hover{background:#054d6d;box-shadow:0 10px 26px rgba(6,95,134,.28)}
+html[data-theme=light] .nav-links>a.nav-cta{color:#065f86;border-color:#065f86}
+html[data-theme=light] .nav-links>a.nav-cta:hover{background:#065f86;color:#fff}
+html[data-theme=light] .pd-actions .button:not(.ghost){border-color:#065f86}
+.core{color:#f3f6fc}
+
+/* v6: real logo mark */
+img.brand-mark{display:block;width:auto;height:38px;background:none;border-radius:0}
+.navbar.scrolled img.brand-mark{height:34px}.navbar img.brand-mark{transition:height .25s}
+.footer img.brand-mark{height:32px}
