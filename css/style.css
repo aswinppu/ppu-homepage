@@ -101,3 +101,14 @@ html[data-theme=light] .pd-actions .button:not(.ghost){border-color:#065f86}
 img.brand-mark{display:block;width:auto;height:38px;background:none;border-radius:0}
 .navbar.scrolled img.brand-mark{height:34px}.navbar img.brand-mark{transition:height .25s}
 .footer img.brand-mark{height:32px}
+
+/* v7: clients */
+.cgroup{display:grid;grid-template-columns:190px 1fr;gap:24px;padding:26px 0;border-top:1px solid var(--line)}
+.cgroup h3{font-size:1rem;margin:10px 0 0;color:var(--muted);font-weight:600;letter-spacing:0}
+.cgrid{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(170px,1fr));gap:12px}
+.client{min-height:84px;padding:14px 16px;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;background:var(--surface);border:1px solid var(--line);border-radius:6px}
+.client span{font-weight:700;font-size:1rem;letter-spacing:-.01em}.client small{color:var(--muted);font-size:.7rem;margin-top:2px}
+.client img{max-width:100%;max-height:44px;object-fit:contain}
+.cmore{margin:6px 0 0;padding-top:20px;border-top:1px solid var(--line);font-size:.88rem}
+@media(max-width:900px){.cgroup{grid-template-columns:1fr;gap:12px}.cgroup h3{margin:0}}
+@media(max-width:700px){.cgrid{grid-template-columns:repeat(2,1fr)}}
