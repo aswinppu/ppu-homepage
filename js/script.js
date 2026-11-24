@@ -81,7 +81,7 @@ const dlg=document.getElementById('pdialog');let curP=null,opener=null;
 function renderP(){if(!curP)return;const p=PD.items[curP],t=p[lang],u=PD.ui[lang],$=id=>document.getElementById(id);
   $('pdEyebrow').textContent=u.eye;$('pdMark').textContent=p.mark;$('pdName').textContent=p.name;$('pdTag').textContent=t.tag;$('pdDesc').textContent=t.desc;
   $('pdChips').innerHTML='';t.chips.forEach(c=>{const li=document.createElement('li');li.textContent=c;$('pdChips').appendChild(li)});$('pdChips').hidden=!t.chips.length;
-  const v=$('pdVisit');v.hidden=!p.url;if(p.url){v.href=p.url;v.textContent=u.visit(p.name)}
+  const v=$('pdVisit');v.hidden=!p.url;if(p.url){v.href=p.url;v.textContent=u.visit(p.name)}else{v.removeAttribute('href');v.textContent=''}
   $('pdDiscuss').textContent=u.discuss;$('pdNote').textContent=u.note;$('pdClose').setAttribute('aria-label',u.close)}
 document.querySelectorAll('[data-product]').forEach(b=>b.addEventListener('click',()=>{curP=b.dataset.product;opener=b;renderP();dlg.showModal()}));
 document.getElementById('pdClose').addEventListener('click',()=>dlg.close());

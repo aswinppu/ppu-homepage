@@ -84,3 +84,7 @@ html[data-theme=light]{color-scheme:light;--bg:#f5f7fb;--alt:#eaf0f7;--surface:#
 .pd-note{margin:28px 0 0;font-size:.74rem}
 button.card-link{background:none;border:0;border-bottom:1px solid transparent;padding:0;font-family:inherit;cursor:pointer;text-align:left}button.card-link:hover{border-color:var(--accent)}
 @media(max-width:700px){.pd{padding:36px 24px 26px}}
+
+/* v4 fixes */
+[hidden]{display:none!important}
+.card-link,button.card-link{align-self:flex-start;width:auto}
